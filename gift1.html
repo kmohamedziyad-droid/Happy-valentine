@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Romantic Flowers 🌹</title>
+<title>A Garden For You 🌹</title>
 <style>
 body{
     margin:0;
-    background:#1a001a;
+    background:#0d001a;
     color:white;
     text-align:center;
     font-family:Poppins,sans-serif;
@@ -19,28 +19,28 @@ h1{
 
 .flower{
     position:absolute;
-    font-size:30px;
-    animation:fall 8s linear infinite;
+    font-size:28px;
+    animation:fall linear infinite;
 }
 
 @keyframes fall{
     from{transform:translateY(-100px);}
-    to{transform:translateY(100vh);}
+    to{transform:translateY(110vh);}
 }
 </style>
 </head>
 <body>
 
-<h1>A Garden Just For You 🌹</h1>
-<p>You deserve flowers every single day of your life.</p>
+<h1>If I Were There… I'd Bring You These 🌹</h1>
+<p>Until I can hold you, let these digital roses fall for you.</p>
 
 <script>
-for(let i=0;i<25;i++){
+for(let i=0;i<40;i++){
     let f=document.createElement("div");
     f.className="flower";
     f.innerHTML="🌹";
     f.style.left=Math.random()*100+"vw";
-    f.style.animationDuration=(5+Math.random()*5)+"s";
+    f.style.animationDuration=(4+Math.random()*6)+"s";
     document.body.appendChild(f);
 }
 </script>
