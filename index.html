@@ -1,105 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Nada ❤️</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    background:radial-gradient(circle at center,#ff2e63,#8e0e00 60%,#1a001a);
-    font-family:'Poppins',sans-serif;
-    color:white;
-    text-align:center;
-    overflow:hidden;
+* {
+  box-sizing: border-box;
 }
 
-/* Floating hearts */
-.heart{
-    position:absolute;
-    font-size:20px;
-    animation:float 6s linear infinite;
-    opacity:0.7;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3, #ffd6e0);
+  color: white;
+  overflow-x: hidden;
 }
 
-@keyframes float{
-    from{transform:translateY(100vh);}
-    to{transform:translateY(-10vh);}
+/* ---------------- FIRST PAGE ---------------- */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
 }
 
-h1{
-    font-family:'Great Vibes',cursive;
-    font-size:75px;
-    margin-bottom:20px;
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  margin-bottom: 20px;
 }
 
-p{
-    font-size:20px;
-    max-width:600px;
-    margin-bottom:40px;
+.hero p {
+  font-size: 22px;
+  max-width: 700px;
+  margin-bottom: 40px;
 }
 
-button{
-    padding:15px 45px;
-    font-size:18px;
-    border:none;
-    border-radius:50px;
-    margin:20px;
-    cursor:pointer;
-    transition:0.3s;
+/* Buttons container */
+.buttons {
+  position: relative;
+  width: 320px;
+  height: 100px;
 }
 
-#yes{
-    background:white;
-    color:#ff2e63;
-    font-weight:bold;
+button {
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
 }
 
-#yes:hover{
-    transform:scale(1.15);
+#yes {
+  background: white;
+  color: #ff4d6d;
+  font-weight: bold;
 }
 
-#no{
-    background:black;
-    color:white;
-    position:absolute;
+#no {
+  position: absolute;
+  right: 0;
+  background: #ff4d6d;
+  color: white;
+}
+
+/* ---------------- GIFT SELECTION ---------------- */
+
+.gifts {
+  min-height: 100vh;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.gifts h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gift-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 40px 25px;
+  box-shadow: 0 0 30px rgba(255,0,85,0.4);
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  position: relative;
+}
+
+.gift-card::before {
+  content: "🎀";
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 35px;
+}
+
+.gift-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 0 50px rgba(255,0,85,0.7);
+}
+
+.gift-card h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.gift-card p {
+  font-size: 17px;
+  opacity: 0.95;
+}
+
+/* ---------------- LAST GIFT PAGE ---------------- */
+
+.last-gift {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.love-frame {
+  max-width: 900px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 60px;
+  border: 2px solid rgba(255,255,255,0.5);
+  box-shadow: 0 0 50px rgba(255,0,85,0.6);
+  text-align: center;
+}
+
+.love-frame h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  margin-bottom: 25px;
+}
+
+.love-frame .divider {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.love-frame p {
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+/* Floating decorations */
+.heart, .petal {
+  position: fixed;
+  font-size: 22px;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
 }
 </style>
 </head>
+
 <body>
 
-<h1>Nada… 💖</h1>
-<p>
-Distance means so little when someone means so much.  
-Will you be my Valentine?
-</p>
+<!-- FIRST PAGE -->
+<section class="hero">
+  <h1>Nada ❤️</h1>
+  <p>
+    I know distance separates us, but my heart has already chosen you.
+    So I have one simple question…
+  </p>
 
-<button id="yes" onclick="goNext()">Yes 💘</button>
-<button id="no">No 😅</button>
+  <div class="buttons">
+    <button id="yes">Yes 💕</button>
+    <button id="no">No 🙃</button>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="gifts">
+  <h2>Choose Your Gift 🎁</h2>
+
+  <div class="gift-grid">
+    <div class="gift-card">
+      <h3>💌 A Love Letter</h3>
+      <p>Words written only for you, straight from my heart.</p>
+    </div>
+
+    <div class="gift-card">
+      <h3>🌹 A Valentine Surprise</h3>
+      <p>Flowers, love, and a reminder that you are deeply cherished.</p>
+    </div>
+
+    <div class="gift-card">
+      <h3>❤️ Forever Promise</h3>
+      <p>Not a gift you open — a feeling you keep.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LAST GIFT -->
+<section class="last-gift">
+  <div class="love-frame">
+    <h1>Forever & Always</h1>
+    <div class="divider">✨ 🌹 ✨</div>
+    <p>
+      Even across cities, countries, and time zones,
+      my heart always finds its way back to you.
+      <br><br>
+      You are my favorite thought, my calm, my joy,
+      and the love I choose — today and every day.
+    </p>
+    <div class="divider">💖 💖 💖</div>
+  </div>
+</section>
 
 <script>
-function goNext(){
-    window.location.href="gifts.html";
-}
+/* No button movement (safe area) */
+const noBtn = document.getElementById("no");
+noBtn.addEventListener("mouseover", () => {
+  const container = document.querySelector(".buttons");
+  const maxX = container.offsetWidth - noBtn.offsetWidth;
+  const maxY = container.offsetHeight - noBtn.offsetHeight;
 
-const noBtn=document.getElementById("no");
-noBtn.addEventListener("mouseover",function(){
-    noBtn.style.left=Math.random()*80+"vw";
-    noBtn.style.top=Math.random()*80+"vh";
+  noBtn.style.left = Math.random() * maxX + "px";
+  noBtn.style.top = Math.random() * maxY + "px";
 });
 
-/* Generate floating hearts */
-for(let i=0;i<25;i++){
-    let h=document.createElement("div");
-    h.className="heart";
-    h.innerHTML="💗";
-    h.style.left=Math.random()*100+"vw";
-    h.style.animationDuration=(4+Math.random()*6)+"s";
-    document.body.appendChild(h);
+/* Decorations */
+for (let i = 0; i < 20; i++) {
+  const el = document.createElement("div");
+  el.className = Math.random() > 0.5 ? "heart" : "petal";
+  el.innerHTML = el.className === "heart" ? "💖" : "🌹";
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.body.appendChild(el);
 }
 </script>
 
