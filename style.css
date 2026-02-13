@@ -5,20 +5,22 @@ body {
   font-family: 'Playfair Display', serif;
   background: linear-gradient(135deg, #ff4d6d, #ff8fa3, #ffd6e0);
   color: white;
-  text-align: center;
   overflow-x: hidden;
 }
 
-/* ---------------- HERO PAGE ---------------- */
-
-.hero {
+/* CENTER ALL PAGES PROPERLY */
+.hero,
+.gift-page {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
 }
+
+/* ---------------- HERO ---------------- */
 
 .hero h1 {
   font-family: 'Great Vibes', cursive;
@@ -34,18 +36,19 @@ body {
 
 .buttons {
   position: relative;
-  width: 350px;
-  height: 120px;
+  width: 320px;
+  height: 110px;
   margin-top: 40px;
 }
 
 button {
-  padding: 18px 45px;
+  padding: 16px 40px;
   font-size: 20px;
   border-radius: 40px;
   border: none;
   cursor: pointer;
   font-family: 'Playfair Display', serif;
+  transition: 0.3s;
 }
 
 #yes {
@@ -57,6 +60,7 @@ button {
 
 #no {
   position: absolute;
+  right: 0;
   background: #ff1e56;
   color: white;
   box-shadow: 0 0 20px rgba(255,0,85,0.8);
@@ -68,13 +72,14 @@ button {
   font-family: 'Great Vibes', cursive;
   font-size: 75px;
   margin-top: 70px;
+  text-align: center;
 }
 
 .gift-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 50px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 80px auto;
   padding: 20px;
 }
@@ -89,6 +94,7 @@ button {
   transition: 0.4s;
   cursor: pointer;
   position: relative;
+  text-align: center;
 }
 
 .gift-card::before {
@@ -97,6 +103,11 @@ button {
   top: -15px;
   right: -15px;
   font-size: 45px;
+}
+
+.gift-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 80px rgba(255,0,85,0.8);
 }
 
 .gift-card h3 {
@@ -108,23 +119,38 @@ button {
   font-size: 20px;
 }
 
-.gift-card:hover {
-  transform: translateY(-15px) scale(1.06);
-  box-shadow: 0 0 80px rgba(255,0,85,0.8);
-}
-
-/* ---------------- LETTER BOX ---------------- */
+/* ---------------- DECORATED LETTER SHEET ---------------- */
 
 .love-box {
-  background: linear-gradient(145deg, #fff0f3, #ffe3ec);
+  background: #fff8f0;
   color: #b3003c;
-  padding: 80px 60px;
-  border-radius: 40px;
+  padding: 90px 70px;
+  border-radius: 20px;
   max-width: 900px;
-  box-shadow: 0 0 80px rgba(255,0,85,0.6);
-  border: 6px double #ff4d6d;
-  font-size: 24px;
+  width: 100%;
+  box-shadow: 0 0 90px rgba(255,0,85,0.6);
+  border: 8px solid #ff4d6d;
+  position: relative;
   line-height: 1.8;
+  font-size: 24px;
+}
+
+/* Decorative corners */
+.love-box::before,
+.love-box::after {
+  content: "🌹";
+  position: absolute;
+  font-size: 40px;
+}
+
+.love-box::before {
+  top: 15px;
+  left: 20px;
+}
+
+.love-box::after {
+  bottom: 15px;
+  right: 20px;
 }
 
 .love-box h1 {
@@ -139,11 +165,13 @@ button {
   background: rgba(255,255,255,0.35);
   backdrop-filter: blur(25px);
   padding: 90px 70px;
-  border-radius: 45px;
+  border-radius: 40px;
   max-width: 950px;
+  width: 100%;
   box-shadow: 0 0 100px rgba(255,0,85,0.8);
   font-size: 26px;
   line-height: 1.8;
+  text-align: center;
 }
 
 .final-frame h1 {
@@ -156,7 +184,7 @@ button {
   margin: 30px 0;
 }
 
-/* ---------------- FLOWERS ANIMATION ---------------- */
+/* ---------------- FLOWERS ---------------- */
 
 .flower {
   position: fixed;
