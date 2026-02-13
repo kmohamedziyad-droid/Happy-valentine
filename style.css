@@ -1,120 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  background: linear-gradient(135deg, #2b0a3d, #5f0f40, #9a1750);
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #ffb3c6, #ff4d6d);
   color: white;
+  text-align: center;
   overflow-x: hidden;
 }
 
-/* CENTERING */
-.hero,
-.gift-page {
+/* HERO */
+.hero {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 40px;
 }
 
-/* HERO */
 .hero h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 95px;
-  margin-bottom: 20px;
+  font-size: 90px;
 }
 
 .hero p {
-  font-size: 28px;
-  max-width: 850px;
+  font-size: 26px;
+  max-width: 700px;
   line-height: 1.6;
 }
 
 button {
   padding: 18px 45px;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 40px;
   border: none;
+  margin: 15px;
   cursor: pointer;
-  font-family: 'Cormorant Garamond', serif;
 }
 
 #yes {
   background: white;
-  color: #5f0f40;
-  font-weight: 600;
-  box-shadow: 0 0 30px rgba(255,255,255,0.8);
+  color: #ff4d6d;
+  font-weight: bold;
 }
 
 #no {
-  position: absolute;
-  background: #ff2e63;
+  position: fixed;
+  background: #d90429;
   color: white;
 }
 
-/* LETTER SHEET */
-.love-box {
-  background: #fffaf5;
-  color: #5f0f40;
-  padding: 100px 80px;
-  max-width: 950px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 100px rgba(255, 46, 99, 0.6);
-  border: 12px solid #9a1750;
-  position: relative;
-  font-size: 26px;
-  line-height: 1.9;
-}
-
-.love-box h1 {
+/* GIFTS PAGE */
+.title {
   font-family: 'Great Vibes', cursive;
-  font-size: 85px;
-  margin-bottom: 40px;
+  font-size: 70px;
+  margin-top: 70px;
 }
 
-/* Decorative corner roses */
-.love-box::before,
-.love-box::after {
-  content: "🌹";
-  position: absolute;
-  font-size: 45px;
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
 }
 
-.love-box::before {
-  top: 15px;
-  left: 20px;
+.gift-card {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(15px);
+  padding: 60px 40px;
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgba(255,0,85,0.5);
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-.love-box::after {
-  bottom: 15px;
-  right: 20px;
+.gift-card:hover {
+  transform: translateY(-12px) scale(1.05);
 }
 
-/* FINAL FRAME */
-.final-frame {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  padding: 100px 80px;
-  max-width: 1000px;
-  width: 100%;
-  border-radius: 40px;
-  box-shadow: 0 0 120px rgba(255, 46, 99, 0.8);
+.gift-card h3 {
   font-size: 28px;
-  line-height: 1.9;
 }
 
-.final-frame h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 95px;
-}
-
-.decor {
-  font-size: 35px;
-  margin: 35px 0;
+.gift-card p {
+  font-size: 20px;
 }
 
 /* FLOWERS */
@@ -126,7 +97,6 @@ button {
 }
 
 @keyframes fall {
-  0% { transform: translateY(-10vh) rotate(0deg); }
-  100% { transform: translateY(110vh) rotate(360deg); }
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(110vh); }
 }
-
