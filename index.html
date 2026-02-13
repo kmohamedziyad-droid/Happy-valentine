@@ -11,25 +11,33 @@ body{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    background: radial-gradient(circle at top,#ff4e88,#1a001a);
+    background:radial-gradient(circle at center,#ff4e88,#1a001f 70%);
     font-family:'Poppins',sans-serif;
     color:white;
-    text-align:center;
     overflow:hidden;
+    text-align:center;
 }
 
 h1{
     font-family:'Great Vibes',cursive;
-    font-size:60px;
-    margin-bottom:30px;
+    font-size:70px;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease forwards;
+}
+
+p{
+    max-width:600px;
+    opacity:0;
+    animation:fadeIn 3s ease forwards;
+    animation-delay:1s;
 }
 
 button{
-    padding:15px 35px;
+    padding:15px 40px;
     font-size:18px;
     border:none;
-    border-radius:40px;
-    margin:15px;
+    border-radius:50px;
+    margin:20px;
     cursor:pointer;
     transition:0.3s;
 }
@@ -49,11 +57,19 @@ button{
     color:white;
     position:absolute;
 }
+
+@keyframes fadeIn{
+    to{opacity:1;}
+}
 </style>
 </head>
 <body>
 
-<h1>Nada… will you be my Valentine? 💖</h1>
+<h1>Nada…</h1>
+<p>
+Even though miles separate us, my heart finds its way to you every single day.  
+Will you be my Valentine? 💖
+</p>
 
 <button id="yes" onclick="goNext()">Yes 💘</button>
 <button id="no">No 😅</button>
