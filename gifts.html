@@ -1,73 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Your Valentine Gifts 💝</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-<style>
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#8e0e00,#ff2e63,#ff6a88);
-    font-family:'Poppins',sans-serif;
-    color:white;
-    text-align:center;
-}
-
-h1{
-    font-family:'Playfair Display',serif;
-    font-size:48px;
-    margin-bottom:50px;
-}
-
-.container{
-    display:flex;
-    gap:40px;
-}
-
-.card{
-    width:280px;
-    height:280px;
-    border-radius:30px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(20px);
-    padding:30px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    font-size:22px;
-    font-weight:500;
-    cursor:pointer;
-    transition:0.4s;
-    box-shadow:0 20px 60px rgba(0,0,0,0.4);
-}
-
-.card:hover{
-    transform:translateY(-15px) scale(1.08);
-    background:rgba(255,255,255,0.25);
-}
-</style>
+  <title>Choose Your Gift 🎁</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="gifts-page">
 
-<h1>Choose Your Valentine Surprise 💖</h1>
+  <h2 class="title">Choose Your Gift 🎁</h2>
 
-<div class="container">
-    <div class="card" onclick="go1()">🌹 A Bouquet From My Heart</div>
-    <div class="card" onclick="go2()">💌 A Love Letter For You</div>
-    <div class="card" onclick="go3()">✨ Our Future Together</div>
-</div>
+  <div class="gift-grid">
 
-<script>
-function go1(){window.location.href="gift1.html";}
-function go2(){window.location.href="gift2.html";}
-function go3(){window.location.href="gift3.html";}
-</script>
+    <div class="gift-card" onclick="location.href='gift1.html'">
+      <h3>💌 Love Letter</h3>
+      <p>Something written only for you.</p>
+    </div>
+
+    <div class="gift-card" onclick="location.href='gift2.html'">
+      <h3>🌹 Valentine Surprise</h3>
+      <p>A romantic surprise made with love.</p>
+    </div>
+
+    <div class="gift-card" onclick="location.href='gift3.html'">
+      <h3>❤️ Forever Promise</h3>
+      <p>Not something you open… something you feel.</p>
+    </div>
+
+  </div>
 
 </body>
 </html>
-
