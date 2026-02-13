@@ -1,147 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   background: linear-gradient(135deg, #ff4d6d, #ff8fa3, #ffd6e0);
   color: white;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* Hero Page */
+/* ---------------- HERO PAGE ---------------- */
+
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 60px;
 }
 
 .hero h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 70px;
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 26px;
+  max-width: 800px;
+  line-height: 1.6;
 }
 
 .buttons {
   position: relative;
-  width: 320px;
-  height: 100px;
-  margin-top: 30px;
+  width: 350px;
+  height: 120px;
+  margin-top: 40px;
 }
 
 button {
-  padding: 15px 35px;
-  font-size: 18px;
-  border-radius: 30px;
+  padding: 18px 45px;
+  font-size: 20px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
+  font-family: 'Playfair Display', serif;
 }
 
 #yes {
   background: white;
   color: #ff4d6d;
-  font-weight: bold;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
 }
 
 #no {
   position: absolute;
-  right: 0;
-  background: #ff4d6d;
+  background: #ff1e56;
   color: white;
+  box-shadow: 0 0 20px rgba(255,0,85,0.8);
 }
 
-/* Gifts Page */
+/* ---------------- GIFT SECTION ---------------- */
+
 .title {
   font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  margin-top: 60px;
+  font-size: 75px;
+  margin-top: 70px;
 }
 
 .gift-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-  max-width: 1000px;
-  margin: 60px auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
 }
 
 .gift-card {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(20px);
-  padding: 40px;
-  border-radius: 30px;
-  border: 2px solid rgba(255,255,255,0.4);
-  box-shadow: 0 0 40px rgba(255,0,85,0.4);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(25px);
+  padding: 60px 40px;
+  border-radius: 35px;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 60px rgba(255,0,85,0.5);
   transition: 0.4s;
   cursor: pointer;
   position: relative;
 }
 
 .gift-card::before {
-  content: "🎀";
+  content: "🌹";
   position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 35px;
+  top: -15px;
+  right: -15px;
+  font-size: 45px;
+}
+
+.gift-card h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.gift-card p {
+  font-size: 20px;
 }
 
 .gift-card:hover {
-  transform: translateY(-12px) scale(1.05);
-  box-shadow: 0 0 60px rgba(255,0,85,0.7);
+  transform: translateY(-15px) scale(1.06);
+  box-shadow: 0 0 80px rgba(255,0,85,0.8);
 }
 
-/* Gift Pages */
-.gift-page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+/* ---------------- LETTER BOX ---------------- */
+
+.love-box {
+  background: linear-gradient(145deg, #fff0f3, #ffe3ec);
+  color: #b3003c;
+  padding: 80px 60px;
+  border-radius: 40px;
+  max-width: 900px;
+  box-shadow: 0 0 80px rgba(255,0,85,0.6);
+  border: 6px double #ff4d6d;
+  font-size: 24px;
+  line-height: 1.8;
 }
 
-.love-box,
+.love-box h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 75px;
+  margin-bottom: 30px;
+}
+
+/* ---------------- FINAL FRAME ---------------- */
+
 .final-frame {
-  background: rgba(255,255,255,0.25);
-  backdrop-filter: blur(20px);
-  padding: 60px;
-  border-radius: 30px;
-  max-width: 800px;
-  box-shadow: 0 0 50px rgba(255,0,85,0.6);
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(25px);
+  padding: 90px 70px;
+  border-radius: 45px;
+  max-width: 950px;
+  box-shadow: 0 0 100px rgba(255,0,85,0.8);
+  font-size: 26px;
+  line-height: 1.8;
 }
 
 .final-frame h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 65px;
+  font-size: 85px;
 }
 
 .decor {
-  font-size: 28px;
-  margin: 20px 0;
+  font-size: 32px;
+  margin: 30px 0;
 }
 
-/* Gift 2 Layout */
-.surprise-container {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  max-width: 1100px;
+/* ---------------- FLOWERS ANIMATION ---------------- */
+
+.flower {
+  position: fixed;
+  font-size: 26px;
+  animation: fall linear infinite;
+  pointer-events: none;
 }
 
-.text-box {
-  flex: 1;
-  background: rgba(255,255,255,0.3);
-  padding: 40px;
-  border-radius: 20px;
-}
-
-.image-box img {
-  max-width: 350px;
-  border-radius: 20px;
-  border: 4px solid white;
-  box-shadow: 0 0 30px rgba(255,0,85,0.7);
-}
-
-@media (max-width: 900px) {
-  .surprise-container {
-    flex-direction: column;
-  }
+@keyframes fall {
+  0% { transform: translateY(-10vh); opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
 }
