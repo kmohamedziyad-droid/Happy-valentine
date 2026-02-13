@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>A Garden For You 🌹</title>
+<title>Your Valentine Bouquet 🌹</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 <style>
 body{
     margin:0;
-    background:#0d001a;
+    height:100vh;
+    background:linear-gradient(135deg,#8e0e00,#ff2e63,#ff6a88);
+    font-family:'Poppins',sans-serif;
     color:white;
     text-align:center;
-    font-family:Poppins,sans-serif;
     overflow:hidden;
 }
 
 h1{
-    margin-top:60px;
-    font-size:40px;
+    margin-top:70px;
+    font-family:'Playfair Display',serif;
+    font-size:45px;
 }
 
-.flower{
+p{
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+/* Bouquet center */
+.bouquet{
+    font-size:80px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+/* Falling petals */
+.petal{
     position:absolute;
-    font-size:28px;
+    font-size:22px;
     animation:fall linear infinite;
 }
 
 @keyframes fall{
-    from{transform:translateY(-100px);}
+    from{transform:translateY(-10vh);}
     to{transform:translateY(110vh);}
 }
 </style>
 </head>
 <body>
 
-<h1>If I Were There… I'd Bring You These 🌹</h1>
-<p>Until I can hold you, let these digital roses fall for you.</p>
+<h1>A Valentine Bouquet For You 🌹</h1>
+<p>If I could, I’d place these in your hands myself.</p>
+
+<div class="bouquet">💐</div>
 
 <script>
-for(let i=0;i<40;i++){
-    let f=document.createElement("div");
-    f.className="flower";
-    f.innerHTML="🌹";
-    f.style.left=Math.random()*100+"vw";
-    f.style.animationDuration=(4+Math.random()*6)+"s";
-    document.body.appendChild(f);
+for(let i=0;i<35;i++){
+    let p=document.createElement("div");
+    p.className="petal";
+    p.innerHTML="🌹";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(4+Math.random()*6)+"s";
+    document.body.appendChild(p);
 }
 </script>
 
