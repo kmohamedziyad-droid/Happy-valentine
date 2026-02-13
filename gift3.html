@@ -1,164 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forever Yours ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ff4e8a, #ff99ac, #ffccd5);
-  overflow-x: hidden;
-}
-
-/* Falling petals */
-.petal {
-  position: fixed;
-  top: -10px;
-  font-size: 24px;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-}
-
-/* Main layout */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 40px;
-}
-
-.card {
-  display: flex;
-  gap: 40px;
-  max-width: 1100px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(15px);
-  border-radius: 25px;
-  padding: 50px;
-  box-shadow: 0 0 40px rgba(255, 0, 85, 0.4);
-  border: 2px solid rgba(255,255,255,0.4);
-}
-
-/* Text section */
-.text-box {
-  flex: 1;
-  background: rgba(255,255,255,0.3);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: inset 0 0 20px rgba(255,255,255,0.3);
-}
-
-.text-box h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px rgba(255,255,255,0.8);
-}
-
-.text-box p {
-  font-size: 20px;
-  color: white;
-  line-height: 1.8;
-}
-
-/* Image section */
-.image-box {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-box img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 0, 85, 0.7);
-  border: 4px solid white;
-}
-
-/* Floating hearts */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: floatUp 6s linear infinite;
-}
-
-@keyframes floatUp {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(-120vh); opacity: 0; }
-}
-
-@media (max-width: 900px) {
-  .card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-</style>
+  <title>Forever ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="gift-page">
 
-<body>
+  <div class="final-frame">
+    <h1>Forever & Always</h1>
 
-<div class="container">
-  <div class="card">
+    <div class="decor">🌹 💖 ✨ 💖 🌹</div>
 
-    <div class="text-box">
-      <h1>Forever & Always ❤️</h1>
-      <p>
-        My love, even though we are miles apart,
-        my heart chooses you every single day.  
-        You are my peace, my happiness,
-        my favorite notification,
-        and the most beautiful part of my life.
-        <br><br>
-        Distance means nothing when someone means everything.
-        And you mean everything to me.
-      </p>
-    </div>
+    <p>
+      Even across distance,
+      my heart chooses you every single day.
+      <br><br>
+      You are not just my Valentine.
+      You are my forever.
+      <br><br>
+      And that’s a promise.
+    </p>
 
-    <div class="image-box">
-      <!-- PUT HER IMAGE LINK BELOW -->
-      <img src="PUT_HER_IMAGE_LINK_HERE">
-    </div>
-
+    <div class="decor">💖 ✨ 🌹 ✨ 💖</div>
   </div>
-</div>
-
-<script>
-/* Petals */
-for (let i = 0; i < 20; i++) {
-  let petal = document.createElement("div");
-  petal.classList.add("petal");
-  petal.innerHTML = "🌹";
-  petal.style.left = Math.random() * 100 + "vw";
-  petal.style.animationDuration = (5 + Math.random() * 5) + "s";
-  document.body.appendChild(petal);
-}
-
-/* Floating hearts */
-for (let i = 0; i < 15; i++) {
-  let heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
-  document.body.appendChild(heart);
-}
-</script>
 
 </body>
 </html>
