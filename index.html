@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nada ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);
+    color:white;
+    overflow-x:hidden;
+    text-align:center;
+}
+
+/* Floating Flowers */
+.flower{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation: fall linear infinite;
+    opacity:0.8;
+}
+
+@keyframes fall{
+    0%{ transform: translateY(0) rotate(0deg); }
+    100%{ transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Main Container */
+.container{
+    padding:80px 20px;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size:48px;
+    margin-bottom:20px;
+    animation: fadeIn 2s ease forwards;
+}
+
+p{
+    font-size:18px;
+    max-width:600px;
+    margin:0 auto 40px;
+    opacity:0;
+    animation: fadeIn 3s ease forwards;
+    animation-delay:1s;
+}
+
+img{
+    width:280px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+    transition:0.5s;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn{
+    to{ opacity:1; }
+}
+
+button{
+    margin-top:30px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#e94560;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff2e63;
+    transform:scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<!-- Flowers -->
+<div class="flower" style="left:5%; animation-duration:8s;">🌸</div>
+<div class="flower" style="left:15%; animation-duration:12s;">🌷</div>
+<div class="flower" style="left:30%; animation-duration:10s;">🌹</div>
+<div class="flower" style="left:50%; animation-duration:14s;">🌸</div>
+<div class="flower" style="left:70%; animation-duration:9s;">🌷</div>
+<div class="flower" style="left:85%; animation-duration:11s;">🌹</div>
+
+<div class="container">
+
+<h1>For Nada ❤️</h1>
+
+<p>
+You are the most beautiful thing that ever happened in my life.  
+Every smile of yours makes my world brighter.  
+This little website is just a small way to show you how special you are to me.
+</p>
+
+<!-- PUT HER IMAGE LINK BELOW -->
+<img src="PUT_HER_IMAGE_LINK_HERE">
+
+<br>
+
+<button onclick="showMessage()">Click Me 💌</button>
+
+</div>
+
+<script>
+function showMessage(){
+    alert("I love you more than words can explain ❤️");
+}
+</script>
+
+</body>
+</html>
