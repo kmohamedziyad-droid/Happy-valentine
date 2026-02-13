@@ -11,29 +11,40 @@ body{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    background:radial-gradient(circle at center,#ff4e88,#1a001f 70%);
+    background:radial-gradient(circle at center,#ff2e63,#8e0e00 60%,#1a001a);
     font-family:'Poppins',sans-serif;
     color:white;
-    overflow:hidden;
     text-align:center;
+    overflow:hidden;
+}
+
+/* Floating hearts */
+.heart{
+    position:absolute;
+    font-size:20px;
+    animation:float 6s linear infinite;
+    opacity:0.7;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
 }
 
 h1{
     font-family:'Great Vibes',cursive;
-    font-size:70px;
+    font-size:75px;
     margin-bottom:20px;
-    animation:fadeIn 2s ease forwards;
 }
 
 p{
+    font-size:20px;
     max-width:600px;
-    opacity:0;
-    animation:fadeIn 3s ease forwards;
-    animation-delay:1s;
+    margin-bottom:40px;
 }
 
 button{
-    padding:15px 40px;
+    padding:15px 45px;
     font-size:18px;
     border:none;
     border-radius:50px;
@@ -57,18 +68,14 @@ button{
     color:white;
     position:absolute;
 }
-
-@keyframes fadeIn{
-    to{opacity:1;}
-}
 </style>
 </head>
 <body>
 
-<h1>Nada…</h1>
+<h1>Nada… 💖</h1>
 <p>
-Even though miles separate us, my heart finds its way to you every single day.  
-Will you be my Valentine? 💖
+Distance means so little when someone means so much.  
+Will you be my Valentine?
 </p>
 
 <button id="yes" onclick="goNext()">Yes 💘</button>
@@ -84,6 +91,16 @@ noBtn.addEventListener("mouseover",function(){
     noBtn.style.left=Math.random()*80+"vw";
     noBtn.style.top=Math.random()*80+"vh";
 });
+
+/* Generate floating hearts */
+for(let i=0;i<25;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="💗";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(4+Math.random()*6)+"s";
+    document.body.appendChild(h);
+}
 </script>
 
 </body>
