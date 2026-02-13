@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Choose Your Gift 🎁</title>
+<title>Your Digital Gifts ✨</title>
 <style>
 body{
     margin:0;
-    background:linear-gradient(135deg,#3a0ca3,#7209b7,#f72585);
-    color:white;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#1d002b,#3a0ca3,#f72585);
     font-family:Poppins,sans-serif;
+    color:white;
     text-align:center;
-    padding-top:60px;
 }
 
 h1{
+    margin-bottom:50px;
     font-size:40px;
-    margin-bottom:40px;
+}
+
+.container{
+    display:flex;
+    gap:40px;
 }
 
 .card{
-    display:inline-block;
-    width:250px;
-    height:200px;
-    margin:20px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
+    width:260px;
+    height:260px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    font-size:20px;
     cursor:pointer;
     transition:0.4s;
-    padding-top:70px;
-    font-size:22px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.05);
+    transform:translateY(-15px) scale(1.05);
 }
 </style>
 </head>
 <body>
 
-<h1>Choose Your First Gift 💝</h1>
+<h1>I Can’t Be There… So I Made This For You 💌</h1>
 
-<div class="card" onclick="go1()">🌹 Romantic Flowers</div>
-<div class="card" onclick="go2()">📸 Our Beautiful Moment</div>
-<div class="card" onclick="go3()">✨ A Special Surprise</div>
+<div class="container">
+    <div class="card" onclick="go1()">🌹 A Garden Across The Distance</div>
+    <div class="card" onclick="go2()">💖 A Message From My Heart</div>
+    <div class="card" onclick="go3()">✨ Our Future Together</div>
+</div>
 
 <script>
 function go1(){window.location.href="gift1.html";}
@@ -52,3 +66,4 @@ function go3(){window.location.href="gift3.html";}
 
 </body>
 </html>
+
